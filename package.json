@@ -6,10 +6,7 @@
   "repository": "git://github.com/martindelataille/flatchr",
    "main": "server.js",
    "scripts": {
-     "test": "jest",
-     "start": "node server.js",
-     "postinstall": "gulp default && bower install --config.interactive=false",
-     "ci": "npm install && npm test"
+     "start": "node server.js"
    },
    "author": "Flatchr <martin.dlt@flatchr.com>",
    "repository": {
