@@ -1,0 +1,38 @@
+@mixin font-smoothing {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin depth($layer) {
+  @if $layer > 0 {
+    $inset: 0;
+    $offset: null;
+  } @else {
+    $inset: inset;
+    $offset: 1px;
+    $layer: $layer * -1;
+  }
+  box-shadow: $inset $offset 1px*($layer/2) 4px*$layer rgba(100, 100, 100, .2*$layer);
+}
+
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 767px) { @content; }
+  }
+
+  @else if $class == sm {
+    @media (min-width: 768px) { @content; }
+  }
+
+  @else if $class == md {
+    @media (min-width: 992px) { @content; }
+  }
+
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg";
+  }
+}

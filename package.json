@@ -1,0 +1,71 @@
+{
+  "name": "flatchr",
+  "description": "Flatchr static website",
+  "version": "0.0.1",
+  "author": "Martin de la Taille <martin.dlt@flatchr.com> (http://flatchr.com)",
+  "repository": "git://github.com/martindelataille/flatchr",
+   "main": "server.js",
+   "scripts": {
+     "test": "jest",
+     "start": "node server.js",
+     "postinstall": "gulp default && bower install --config.interactive=false",
+     "ci": "npm install && npm test"
+   },
+   "author": "Flatchr <martin.dlt@flatchr.com>",
+   "repository": {
+     "type": "git",
+     "url": "https://github.com/Martindelataille/flatchr-b2b"
+   },
+  "engines": {
+      "node": ">=0.10.33"
+  },
+  "browserify": {
+    "main": "src/js/main.js",
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "plugin": {
+      "exports": "plugin",
+      "depends": [
+        "jquery:$"
+      ]
+    }
+  },
+  "dependencies": {
+      "bower": "^1.3.12",
+      "foreman": "^1.2.0",
+      "jsdom": "*",
+      "hoek": "^2.11.0"
+  },
+  "peerDependencies": {
+    "hapi": "8.x.x"
+  },
+  "devDependencies": {
+    "browser-sync": "~1.3.6",
+    "browserify": "^8.0.2",
+    "browserify-shim": "^3.8.2",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.0.0",
+    "gulp-changed": "^0.4.1",
+    "gulp-filesize": "0.0.6",
+    "gulp-iconfont": "^1.0.0",
+    "gulp-imagemin": "^0.6.2",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-notify": "^1.4.2",
+    "gulp-sass": "~1.3.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-sourcemaps": "^1.2.8",
+    "gulp-swig": "^0.7.4",
+    "gulp-uglify": "^1.0.2",
+    "gulp-util": "^3.0.0",
+    "handlebars": "^1.3.0",
+    "lodash": "^2.4.1",
+    "pretty-hrtime": "~0.2.1",
+    "require-dir": "^0.1.0",
+    "vinyl-source-stream": "~0.1.1",
+    "watchify": "^2.2.1"
+  },
+  "private": "true"
+}
