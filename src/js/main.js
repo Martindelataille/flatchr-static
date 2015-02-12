@@ -38,13 +38,13 @@ $(document).ready(function(){
          });
     });
 
-    $(".headline_bloc_picto").hover(function(e) {
+    $(".headline_bloc").hover(function(e) {
         if(target == e.target)
             return;
 
         target = e.target;
         $('.headline_bloc_image').hide();
-        $(target).parent().find('.headline_bloc_image').show();
+        $(target).parent('.headline_bloc').find('.headline_bloc_image').show();
         $('.header').css('background', '#' + $(e.target).parent().data('header'));
     })
 });
