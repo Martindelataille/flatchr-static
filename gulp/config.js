@@ -49,16 +49,12 @@ module.exports = {
     bundleConfigs: [{
       entries: src + '/js/main.js',
       dest: dest,
-      outputName: 'main.js',
-      // Additional file extentions to make optional
-      extensions: ['.js']
+      outputName: 'main.js'
     },
     {
       entries: src + '/js/plugins.js',
       dest: dest,
-      outputName: 'plugins.js',
-      // Additional file extentions to make optional
-      extensions: ['.js']
+      outputName: 'plugins.js'
     }]
   },
   production: {

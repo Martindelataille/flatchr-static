@@ -1,6 +1,9 @@
 $(document).ready(function(){
     var target;
 
+    $('.headline_bloc_image').hide();
+    $('.headline_bloc_image.organize').fadeIn();
+
     $("#signup").submit(function(e){
         e.preventDefault();
 
@@ -40,8 +43,8 @@ $(document).ready(function(){
             return;
 
         target = e.target;
-        $('.headline_bloc_image').fadeOut('fast');
-        $(target).parent().find('.headline_bloc_image').fadeIn('fast');
+        $('.headline_bloc_image').hide();
+        $(target).parent().find('.headline_bloc_image').show();
         $('.header').css('background', '#' + $(e.target).parent().data('header'));
     })
 });
