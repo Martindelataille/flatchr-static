@@ -22,7 +22,7 @@ $(document).ready(function(){
             return;
 
         $.ajax({
-             url: "http://app.flatchr.com/beta",
+             url: "http://www.vk-website.fr/beta",
              type: "POST",
              data: $("#signup").serialize(),
             crossDomain: true,
