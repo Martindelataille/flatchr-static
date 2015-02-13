@@ -3,10 +3,17 @@ var src = './src';
 
 module.exports = {
   browserSync: {
-    proxy: "http://localhost:8080",
-    host: "192.168.33.10",
-    port: 3000,
-    open: "external"
+    server: {
+      // Serve up our build folder
+      baseDir: dest
+    }
+
+    //VM config
+    // proxy: "http://localhost:8080",
+    // host: "192.168.33.10",
+    // port: 3000,
+    // open: "external"
+    //
   },
   sass: {
     src: src + "/sass/*.{sass,scss}",

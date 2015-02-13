@@ -22,7 +22,7 @@ $(document).ready(function(){
             return;
 
         $.ajax({
-             url: "http://www.flatchr.com/beta",
+             url: "http://app.flatchr.com/beta",
              type: "POST",
              data: $("#signup").serialize(),
             crossDomain: true,
