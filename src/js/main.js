@@ -1,9 +1,6 @@
 $(document).ready(function(){
     var target;
 
-    $('.headline_bloc_image').hide();
-    $('.headline_bloc_image.organize').fadeIn();
-
     $("#signup").submit(function(e){
         e.preventDefault();
 
@@ -38,16 +35,9 @@ $(document).ready(function(){
          });
     });
 
-    $(".headline_bloc").hover(function(e) {
-        if(target == e.target)
-            return;
-
-        target = e.target;
-        $('.headline_bloc_image').hide();
-        $(target).find('.headline_bloc_image').show();
-        $(target).parent('.headline_bloc').find('.headline_bloc_image').show();
-
-        $('.header').css('background', '#' + $(e.target).data('header'));
-        $('.header').css('background', '#' + $(e.target).parent().data('header'));
-    })
+    setInterval(function() {
+        console.log('reload')
+        var timestamp = new Date().getTime();
+        $('.organize').css('background', 'url("/images/screen.gif'+'?'+timestamp+'"") 50% 50% no-repeat');
+    }, 6000);
 });
